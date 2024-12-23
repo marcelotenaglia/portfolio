@@ -1,0 +1,44 @@
+body {
+    background-color: black;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    font-family: Dense;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.navbar-logo {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 30px;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 600px) {
+    a {
+      font-size: 25px;
+    }
+    .navbar-container {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+  }
