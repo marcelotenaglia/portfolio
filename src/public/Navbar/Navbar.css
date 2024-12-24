@@ -1,7 +1,3 @@
-body {
-    background-color: black;
-}
-
 .navbar-container {
     display: flex;
     justify-content: space-between;
@@ -24,9 +20,12 @@ body {
     font-size: 30px;
 }
 
+.navbar-toggle {
+    display: none;
+}
+
 a {
     text-decoration: none;
-    color: white;
 }
 
 a:hover {
@@ -34,11 +33,34 @@ a:hover {
 }
 
 @media only screen and (max-width: 600px) {
-    a {
-      font-size: 25px;
+    .navbar-logo a {
+      font-size: 40px;
     }
     .navbar-container {
       margin-left: 10px;
       margin-right: 10px;
+    }
+    .navbar-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        transition: 0.3s ease all;
+        transform: translateX(-100%);
+    }
+    .navbar-links.open {
+        font-size: 65px;
+        align-items: center;
+        margin-top: 50px;
+        transform: translateX(0) !important;
+    }
+    .navbar-links.open a:hover {
+        font-size: 70px;
+    }
+    .navbar-toggle {
+        display: flex !important;
+        flex-direction: column;
     }
   }
