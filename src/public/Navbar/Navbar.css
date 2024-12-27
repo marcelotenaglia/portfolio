@@ -1,23 +1,39 @@
-.navbar-container {
+.navbar {
     display: flex;
-    justify-content: space-between;
-    font-family: Dense;
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    top: 1;
+    left: 0;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
-.navbar-logo {
+.navbar-container {
     display: flex;
-    justify-content: flex-start;
-    font-size: 30px;
+    position: fixed;
+    padding: 1rem 0;
+    margin: 0;
+    color: white;
+    border: 1px solid black;
+    border-radius: 2rem;
+    box-shadow:  0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+    justify-content: center;
+    align-items: center;
+    font-family: Dense;
 }
 
 .navbar-links {
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1.5rem;
     gap: 30px;
-    font-size: 30px;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+    letter-spacing: 1px;
 }
 
 .navbar-toggle {
@@ -25,42 +41,47 @@
 }
 
 a {
+    color: #333333;
+    font-weight: bold;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
-    font-size: 40px;
+    color:#007bff;
 }
 
 @media only screen and (max-width: 600px) {
-    .navbar-logo a {
-      font-size: 40px;
+    
+    .navbar {
+      display: flex;
+      justify-content: center;
     }
+
     .navbar-container {
-      margin-left: 10px;
-      margin-right: 10px;
-    }
+      display: flex;
+      position: fixed;
+      margin-left: 0;
+      justify-content: space-around;
+      border: 1px solid black;
+      border-radius: 2rem;
+    }   
+
     .navbar-links {
-        position: absolute;
-        top: 60px;
-        left: 0;
         display: flex;
-        flex-direction: column;
-        width: 100%;
-        transition: 0.3s ease all;
-        transform: translateX(-100%);
+        gap: 20px;
     }
-    .navbar-links.open {
-        font-size: 65px;
-        align-items: center;
-        margin-top: 50px;
-        transform: translateX(0) !important;
+
+    a {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.15rem;
+    }  
+    
+    a:hover {
+        text-decoration: none;
+        color: #0568FD;
     }
-    .navbar-links.open a:hover {
-        font-size: 70px;
-    }
-    .navbar-toggle {
-        display: flex !important;
-        flex-direction: column;
-    }
+    
+    
   }
